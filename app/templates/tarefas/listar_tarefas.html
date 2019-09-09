@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 {% block conteudo %}
 <h1>Listagem de tarefas</h1>
-<h2>{{nome_tarefa}}</h2>
+{% for tarefa in tarefas %}
+    <div class="card mb-3">
+        <div class="card-header">
+            {{ tarefa.get_prioridade_display }}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ tarefa.titulo }}</h5>
+            <p class="card-text">{{ tarefa.descricao }}</p>
+        </div>
+    </div>
+{% endfor %}
+<a href="{% url 'cadastrar_tarefas' %}"><input type="button" class="btn btn-primary" value="Cadastrar Tarefa"></a>
 {% endblock conteudo %}

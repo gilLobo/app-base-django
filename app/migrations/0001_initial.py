@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('titulo', models.CharField(max_length=30)),
                 ('descricao', models.CharField(max_length=100)),
                 ('data_expiracao', models.DateField()),
-                ('priridade', models.CharField(choices=[{'A', 'Alta'}, {'Normal', 'N'}, {'Baixa', 'B'}], max_length=1)),
+                ('prioridade', models.CharField(choices=[{'A', 'Alta'}, {'Normal', 'N'}, {'Baixa', 'B'}], max_length=1)),
             ],
         ),
     ]
