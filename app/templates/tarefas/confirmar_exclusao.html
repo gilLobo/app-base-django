@@ -6,10 +6,10 @@
         Tem certeza que deseja remover a tarefa abaixo?
     </div>
     <div class="card-body">
-        <h5 class="card-title">{{ tarefa.titulo }}</h5>
-        <p class="card-text">{{ tarefa.descricao }}</p>
+        <h5 class="card-title">{{tarefa.titulo}}</h5>
+        <p class="card-text">{{tarefa.descricao}}</p>
         <hr>
-        <form method="POST">
+        <form method="post">
             {% csrf_token %}
             <button class="btn btn-danger" type="submit">Remover</button>
         </form>
